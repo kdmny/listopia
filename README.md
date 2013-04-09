@@ -60,24 +60,24 @@ Generators / Migrations
 Example Model to add to Lists
 ------------
 
-  $ rails g model Product name:string list_count:integer
-  $ rake db:migrate
-  $ rails c
-  > Product.create(:name => "Huggies")
-  > Product.create(:name => "Pampers")  
+    $ rails g model Product name:string list_count:integer
+    $ rake db:migrate
+    $ rails c
+    > Product.create(:name => "Huggies")
+    > Product.create(:name => "Pampers")`  
 
 Customize the views
 -------------
 
 Change the commented section in app/views/listopia/lists/show.html.haml to:
 
-  %h2 Add to your list
+  `%h2 Add to your list
   = form_for ListItem.new do |f|
     = f.select :resource_id, Product.all.map { |u| [u.name, u.id] }, { include_blank: true }, { class: 'chzn-select', style: "width: 300px;" }
     = f.hidden_field :resource_type, :value => "Product"
     = f.hidden_field :list_id, :value => @list.id
     %br
-    = f.submit "Save"
+    = f.submit "Save"`
 
 Usage
 -----------
