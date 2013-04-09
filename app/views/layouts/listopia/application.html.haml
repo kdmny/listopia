@@ -1,0 +1,9 @@
+!!!
+%html
+  %head
+    %title Listopia
+    = stylesheet_link_tag    "listopia/application", :media => "all"
+    = javascript_include_tag "listopia/application"
+    = csrf_meta_tags
+  %body
+    = yield

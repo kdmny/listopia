@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  type: 
+  description: MyText
+  slug: MyString
+  bag: MyText
+  user_id: 1
+  items_count: 1
+
+two:
+  name: MyString
+  type: 
+  description: MyText
+  slug: MyString
+  bag: MyText
+  user_id: 1
+  items_count: 1

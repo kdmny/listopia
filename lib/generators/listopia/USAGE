@@ -1,0 +1,36 @@
+Description:
+  Listopia generator will copy files for listopia tree in your web project
+
+This text:
+  bundle exec rails g listopia --help
+
+Generators:
+  bundle exec rails g listopia install
+
+  This will create:
+   config/initializers/listopia.rb
+   app/controllers/lists_controller.rb
+   app/controllers/list_items_controller.rb
+	 app/models/list.rb
+	 app/models/list_item.rb	
+
+  bundle exec rails g listopia controllers
+
+  This will create:
+    app/controllers/lists_controller.rb
+    app/controllers/list_items_controller.rb
+
+  bundle exec rails g listopia models
+
+  This will create:
+		app/models/list.rb
+		app/models/list_item.rb	
+
+
+View Generators:
+  bundle exec rails g listopia:views assets
+  bundle exec rails g listopia:views helper
+  bundle exec rails g listopia:views views
+
+Migrations:
+  bundle exec rake listopia_engine:install:migrations

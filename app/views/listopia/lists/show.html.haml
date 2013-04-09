@@ -1,0 +1,25 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @list.name
+%p
+  %b Description:
+  = @list.description
+- if @list.list_items.empty?
+  .alert.alert-notice
+    %h2 Your list is empty
+- else
+  %ul.ui-sortable
+    %li{:id => "list_#{@list.id}", :style => "display:none;"}
+    - @list.list_items.each do |item|
+      %li{:id => "list_item_#{item.id}"}
+        = item.name
+        = link_to "remove", list_item_path(item.id, :format => :json), 
+          "data-method" => :delete, :remote => true, :confirm => "Are you sure?", :class => "listopia-rm"
+/ %h2 Add to your list
+/ = form_for ListItem.new do |f|
+/   = f.select :resource_id, YOURMODEL.all.map { |u| [u.name, u.id] }, { include_blank: true }, { class: 'chzn-select', style: "width: 300px;" }
+/   = f.hidden_field :resource_type, :value => "YourModelType"
+/   = f.hidden_field :list_id, :value => @list.id
+/   %br
+/   = f.submit "Save"

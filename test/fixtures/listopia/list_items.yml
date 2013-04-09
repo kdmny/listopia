@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  resource_id: 1
+  resource_type: MyString
+  list_id: 1
+  position: 1
+
+two:
+  resource_id: 1
+  resource_type: MyString
+  list_id: 1
+  position: 1
